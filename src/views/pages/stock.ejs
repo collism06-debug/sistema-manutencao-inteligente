@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Estoque</title>
+
+    <link rel="stylesheet" href="/css/dashboard.css">
+</head>
+<body>
+
+<div class="sidebar">
+    <h2>SUPORTE TI</h2>
+
+    <a href="/dashboard">Dashboard</a>
+    <a href="/orders">Ordens de Serviço</a>
+    <a href="/devices">Dispositivos</a>
+    <a href="/stock">Estoque</a>
+    <a href="/financial">Financeiro</a>
+
+    <a href="/" class="logout">Sair</a>
+</div>
+
+<div class="main-content">
+
+    <div class="dashboard">
+
+        <h1>Controle de Estoque</h1>
+
+        <form class="stock-form"></form>
+
+            <input type="text" placeholder="Nome da peça">
+
+            <input type="number" placeholder="Quantidade">
+
+            <input type="text" placeholder="Fornecedor">
+
+            <input type="number" placeholder="Valor">
+
+            <button type="submit">
+               
+
+    </tbody>
+
+
+<div class="content-grid">
+
+    <table class="orders-table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Peça</th>
+                <th>Quantidade</th>
+                <th>Fornecedor</th>
+                <th>Valor</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <% stocks.forEach(stock => { %>
+                <tr>
+                    <td><%= stock.id %></td>
+                    <td><%= stock.name %></td>
+                    <td><%= stock.quantity %></td>
+                    <td><%= stock.supplier %></td>
+                    <td>R$ <%= stock.value %></td>
+
+                    <td>
+                        <button class="edit-btn">Editar</button>
+                        <button class="delete-btn">Excluir</button>
+                    </td>
+                </tr>
+            <% }) %>
+        </tbody>
+    </table>
+
+    <div class="cards">
+
+        <div class="card">
+            <h2>Itens</h2>
+            <p>52</p>
+        </div>
+
+        <div class="card">
+            <h2>Baixo Estoque</h2>
+            <p>6</p>
+        </div>
+
+        <div class="card">
+            <h2>Valor Total</h2>
+            <p>R$ 8k</p>
+        </div>
+
+    </div>
+
+</div>

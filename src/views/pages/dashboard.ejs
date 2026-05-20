@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Dispositivos</title>
+
+    <link rel="stylesheet" href="/css/dashboard.css">
+</head>
+<body>
+
+<div class="sidebar">
+    <h2>SUPORTE TI</h2>
+
+    <a href="/dashboard">Dashboard</a>
+    <a href="/orders">Ordens de Serviço</a>
+    <a href="/devices">Dispositivos</a>
+    <a href="/stock">Estoque</a>
+    <a href="/financial">Financeiro</a>
+
+    <a href="/" class="logout">Sair</a>
+</div>
+
+<div class="main-content">
+
+    <div class="dashboard">
+
+        <h1>Dispositivos</h1>
+
+        <form class="device-form">
+
+            <input type="text" placeholder="Nome do dispositivo">
+
+            <input type="text" placeholder="Patrimônio">
+
+            <input type="text" placeholder="Número Serial">
+
+            <select>
+                <option>Computador</option>
+                <option>Notebook</option>
+                <option>Impressora</option>
+            </select>
+
+            <input type="text" placeholder="Técnico Responsável">
+
+            <button type="submit">
+                Cadastrar
+            </button>
+
+        </form>
+
+        <div class="cards">
+
+            <div class="card">
+                <h2>Computadores</h2>
+                <p>18</p>
+            </div>
+
+            <div class="card">
+                <h2>Notebooks</h2>
+                <p>9</p>
+            </div>
+
+            <div class="card">
+                <h2>Impressoras</h2>
+                <p>4</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

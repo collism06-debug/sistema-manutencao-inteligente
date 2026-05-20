@@ -1,0 +1,91 @@
+
+
+ <head>
+
+    <meta charset="UTF-8">
+
+    <title>Ordens de Serviço</title>
+
+    <link rel="stylesheet" href="/css/style.css">
+
+</head>
+
+<body>
+
+    <h1>Ordens de Serviço</h1>
+<<div class="logout">
+    <a href="/logout">
+        <button>Sair</button>
+    </a>
+</div>
+    <form action="/orders/create" method="POST">
+
+        <input
+            type="text"
+            name="problem"
+            placeholder="Problema"
+        >
+
+        <input
+            type="text"
+            name="technician"
+            placeholder="Técnico"
+        >
+
+        <select name="priority">
+
+            <option>Baixa</option>
+            <option>Média</option>
+            <option>Alta</option>
+
+        </select>
+
+        <button type="submit">
+            Criar Ordem
+        </button>
+
+    </form>
+
+    <table>
+
+        <thead>
+
+            <tr>
+                <th>ID</th>
+                <th>Problema</th>
+                <th>Técnico</th>
+                <th>Prioridade</th>
+            <th>Ações</th>
+
+        </thead>
+
+        <tbody>
+
+            <% orders.forEach(order => { %>
+
+                <tr>
+
+                    <td><%= order.id %></td>
+                    <td><%= order.problem %></td>
+                    <td><%= order.technician %></td>
+                    <td><%= order.priority %></td>
+<td>
+
+<a href="/orders/edit/<%= order.id %>">
+    
+    <button>Editar</button>
+</a>
+    <a href="/orders/delete/<%= order.id %>">
+        <button>Excluir</button>
+ </a>
+</td>
+</tr>
+            <% }) %>
+
+        </tbody>
+
+    </table>
+
+</body>
+
+</html>
